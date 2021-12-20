@@ -52,17 +52,26 @@ Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro arra
         for ($i=0; $i < count($keys); $i++) { 
             $key = $keys[$i];
             if($key === 'teachers'){
-                echo '<div class="gray">' . $key .  '</div>';
+                echo '<div class="gray">' . $key . '<br>';
+
+                for ($j=0; $j < count($db[$key]); $j++) { 
+                    echo $db[$key][$j]['name'] . ' ';
+                    echo $db[$key][$j]['lastname'] . '<br>';
+                }
+
+                echo '</div>';
             }
+
             if($key === 'pm'){
-                echo '<div class="green">' . $key .  '</div>';
-            }
+                echo '<div class="green">' . $key .  '<br>';
+                
+                for ($j=0; $j < count($db[$key]); $j++) { 
+                    echo $db[$key][$j]['name'] . ' ';
+                    echo $db[$key][$j]['lastname'] . '<br>';
+                }
 
-            for ($j=0; $j < count($db[$key]); $j++) { 
-                echo $db[$key][$j]['name'] . ' ';
-                echo $db[$key][$j]['lastname'] . '<br>';
+                echo '</div>';
             }
-
         }
     ?>
 </body>
