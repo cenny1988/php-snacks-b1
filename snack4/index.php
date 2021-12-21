@@ -11,7 +11,7 @@ Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà cont
 </head>
 <body>
     <?php
-        $randomArrNum = array();
+        $randomArrNum = [];
         while(count($randomArrNum)<15){
             $newInt = rand(1, 20);
             if(!in_array($newInt, $randomArrNum)){

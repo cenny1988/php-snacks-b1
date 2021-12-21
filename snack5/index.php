@@ -1,6 +1,6 @@
 <!-- ## Snack 5
-
-Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
+Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +22,13 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il pa
     <?php
 
         $paragraphs = explode('.', $paragraph);
+        // for ($i=0; $i < count($paragraphs); $i++) { 
+        //     echo '<p>' .  $paragraphs[$i] . '.</p>';
+        // }
 
-        for ($i=0; $i < count($paragraphs); $i++) { 
-            echo '<p>' .  $paragraphs[$i] . '</p>';
+        // proviamo a rifare il ciclo con un foreach
+        foreach ($paragraphs as $value) {
+            echo '<p>' .  $value . '.</p>';
         }
     ?>
 </body>
